@@ -5,20 +5,20 @@
 class Crsh < Formula
   desc "CRSH — Monitor and control AI coding sessions from any device"
   homepage "https://crsh.ai"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.1/crsh_0.0.1_darwin_amd64.tar.gz"
-      sha256 "f3d7f0616c3bab4d45e44b2926cb20899e34568f089ceb2769d292fc618caf5a"
+      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.2/crsh_0.0.2_darwin_amd64.tar.gz"
+      sha256 "dd8760b89fb441c119a69375b3e7daa82534908866d4601977e7b505630fe43c"
 
       define_method(:install) do
         bin.install "crsh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.1/crsh_0.0.1_darwin_arm64.tar.gz"
-      sha256 "0acbae2bf56f1fd0bf1f46c72065f31acf57bf7114c2e821f2f332a0ad504125"
+      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.2/crsh_0.0.2_darwin_arm64.tar.gz"
+      sha256 "4e874047dd1dd401160ae611e1cfdaa4336307399a127a1495f8083978fa670e"
 
       define_method(:install) do
         bin.install "crsh"
@@ -28,15 +28,15 @@ class Crsh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.1/crsh_0.0.1_linux_amd64.tar.gz"
-      sha256 "8700b345767ae20005ed5c3704b30dff3aedfca637c688486e9e5fdd976c3d18"
+      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.2/crsh_0.0.2_linux_amd64.tar.gz"
+      sha256 "9ba815e6f523f4ef709b605716a1077e83d09c4970c3a267daa316588ce0ef59"
       define_method(:install) do
         bin.install "crsh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.1/crsh_0.0.1_linux_arm64.tar.gz"
-      sha256 "4f72b894c7e8d782cfcd926c9b1ad80c2c7a3f379cf7f51276f51fadaac5040b"
+      url "https://github.com/crshai/crsh-releases/releases/download/v0.0.2/crsh_0.0.2_linux_arm64.tar.gz"
+      sha256 "ad9aa6d56ef57766331a5658cc0b59221fbf357c64939180053ffb29979d0a0d"
       define_method(:install) do
         bin.install "crsh"
       end
